@@ -1,10 +1,27 @@
 body {
     margin: 0;
-    font-family: Nunito Sans, Arial;
+    @font-face {
+        font-family: Yeseva One;
+        src: url(<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">);
+        font-weight: normal;
+        font-style: normal;
+
+        @font-face {
+        font-family: Nunito Sans;
+        src: url(<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">);
+        font-weight: normal;
+        font-style: normal;        
+        }
+    }
+
 }
 
 .container {
-    max-width: 1250px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 .button {
@@ -16,6 +33,11 @@ body {
   padding: 13px 33px;
   color: white;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button:hover {
+    border-color: transparent;
 }
 
 .logo {
@@ -24,10 +46,7 @@ body {
 
 .header {
     background-color: black;
-    display: flex;
-    justify-content: space-between;
-    height: 83px;
-    align-items: center;
+    
 }
 
 .header-content {
@@ -42,6 +61,7 @@ body {
 }
 .header-navigation__item {
     margin-right: 47px;
+   
 }
 
 .header-navigation__item a {
@@ -50,11 +70,27 @@ body {
 }
 
 .theme1 {
-    background-image: url(/images/theme1.jpg);
+    background-image: url('images/theme1.jpg');
     background-size: cover;
     height: 707px;
     padding-top: 194px;
     position: relative;
+
+}
+
+.theme1-overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.theme1-container {
+    position: relative;
+    z-index: 1;
 }
 .title {
     margin: 0;
@@ -64,5 +100,14 @@ body {
     font-size: 40px;
     line-height: 53px;
     text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.text {
+    font-family: Nunito Sans, 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 36px;
     color: #FFFFFF;
 }
